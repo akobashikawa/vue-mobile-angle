@@ -23,21 +23,21 @@ const Component = {
     absolute() { return this.$root.absolute; },
     
     alpha() { 
-      if (this.alphaSound && Math.abs(this.$root.alpha - this.alphaSoundValue) < this.margin) {
+      if (this.alphaSound && Math.abs(Math.abs(this.$root.alpha) - this.alphaSoundValue) < this.margin) {
         this.playTune(440, 'sine');
       }
       return rr(this.$root.alpha);
     },
 
     beta() {
-      if (this.betaSound && Math.abs(this.$root.beta - this.betaSoundValue) > this.margin) {
+      if (this.betaSound && Math.abs(Math.abs(this.$root.beta) - this.betaSoundValue) > this.margin) {
         this.playTune(440, 'sine');
       }
       return rr(this.$root.beta);
     },
 
     gamma() {
-      if (this.gammaSound && Math.abs(this.$root.gamma - this.gammaSoundValue) > this.margin) {
+      if (this.gammaSound && Math.abs(Math.abs(this.$root.gamma) - this.gammaSoundValue) > this.margin) {
         this.playTune(440, 'sine');
       }
       return rr(this.$root.gamma);
