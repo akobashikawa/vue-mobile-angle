@@ -110,6 +110,8 @@ const Component = {
         </b-list-group-item>
       </b-list-group>
 
+      {{ margin }}<b-form-input v-model="margin" type="range" min="0" max="180"></b-form-input>
+
     </b-container>
   </div>`,
 };
