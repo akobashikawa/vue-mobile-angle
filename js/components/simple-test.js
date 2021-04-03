@@ -75,28 +75,83 @@ const Component = {
     <b-container class="mt-4">
       <h1>Simple Test</h1>
 
-      deviceorientation: {{ deviceorientation }} <br>
-      devicemotion: {{ devicemotion }} <br>
-      compassneedscalibration: {{ compassneedscalibration }} <br>
-      <br>
-      absolute: {{ absolute }} <br>
-      alpha: {{ alpha | round }} <br>
-      beta: {{ beta | round }} <br>
-      gamma: {{ gamma | round }} <br>
-      <br>
-      accelerationX: {{ accelerationX | round }} <br>
-      accelerationY: {{ accelerationY | round }} <br>
-      accelerationZ: {{ accelerationZ | round }} <br>
-      <br>
-      accelerationIGX: {{ accelerationIGX | round }} <br>
-      accelerationIGY: {{ accelerationIGY | round }} <br>
-      accelerationIGZ: {{ accelerationIGZ | round }} <br>
-      <br>
-      rotationAlpha: {{ rotationAlpha | round }} <br>
-      rotationBeta: {{ rotationBeta | round }} <br>
-      rotationGamma: {{ rotationGamma | round }} <br>
-      <br>
-      interval: {{ interval }} <br>
+      <b-list-group>
+        <b-list-group-item class="d-flex justify-content-between align-items-center" variant="primary">
+          deviceorientation:
+          <span>{{ deviceorientation }}</span>
+        </b-list-group-item>
+        <b-list-group-item class="d-flex justify-content-between align-items-center">
+          absolute:
+          <span>{{ absolute }}</span>
+        </b-list-group-item>
+        <b-list-group-item class="d-flex justify-content-between align-items-center">
+          alpha:
+          <span>{{ alpha }}</span>
+        </b-list-group-item>
+        <b-list-group-item class="d-flex justify-content-between align-items-center">
+          beta:
+          <span>{{ beta }}</span>
+        </b-list-group-item>
+        <b-list-group-item class="d-flex justify-content-between align-items-center">
+          gamma:
+          <span>{{ gamma }}</span>
+        </b-list-group-item>
+      </b-list-group>
+
+      <b-list-group>
+        <b-list-group-item class="d-flex justify-content-between align-items-center" variant="info">
+          devicemotion:
+          <span>{{ devicemotion }}</span>
+        </b-list-group-item>
+        <b-list-group-item class="d-flex justify-content-between align-items-center">
+          accelerationX:
+          <span>{{ accelerationX }}</span>
+        </b-list-group-item>
+        <b-list-group-item class="d-flex justify-content-between align-items-center">
+          accelerationY:
+          <span>{{ accelerationY }}</span>
+        </b-list-group-item>
+        <b-list-group-item class="d-flex justify-content-between align-items-center">
+          accelerationZ:
+          <span>{{ accelerationZ }}</span>
+        </b-list-group-item>
+        <b-list-group-item class="d-flex justify-content-between align-items-center">
+          accelerationIGX:
+          <span>{{ accelerationIGX }}</span>
+        </b-list-group-item>
+        <b-list-group-item class="d-flex justify-content-between align-items-center">
+          accelerationIGY:
+          <span>{{ accelerationIGY }}</span>
+        </b-list-group-item>
+        <b-list-group-item class="d-flex justify-content-between align-items-center">
+          accelerationIGZ:
+          <span>{{ accelerationIGZ }}</span>
+        </b-list-group-item>
+        <b-list-group-item class="d-flex justify-content-between align-items-center">
+          rotationAlpha:
+          <span>{{ rotationAlpha }}</span>
+        </b-list-group-item>
+        <b-list-group-item class="d-flex justify-content-between align-items-center">
+          rotationBeta:
+          <span>{{ rotationBeta }}</span>
+        </b-list-group-item>
+        <b-list-group-item class="d-flex justify-content-between align-items-center">
+          rotationGamma:
+          <span>{{ rotationGamma }}</span>
+        </b-list-group-item>
+        <b-list-group-item class="d-flex justify-content-between align-items-center">
+          interval:
+          <span>{{ interval }}</span>
+        </b-list-group-item>
+      </b-list-group>
+
+      <b-list-group>
+        <b-list-group-item class="d-flex justify-content-between align-items-center" variant="success">
+          compassneedscalibration:
+          <span>{{ compassneedscalibration }}</span>
+        </b-list-group-item>
+      </b-list-group>
+
     </b-container>
   </div>`,
 };
