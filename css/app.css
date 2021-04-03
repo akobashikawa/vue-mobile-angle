@@ -7,3 +7,47 @@
 .app-box main {
     flex: 1;
 }
+
+.xyz-container {
+  position: relative;
+  margin: 50px 0 50px 100px;
+  width: 200px;
+  height: 200px;
+  perspective-origin: 300px -75px;
+  perspective: 300px;
+}
+.plane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 150px;
+  width: 150px;
+  transition: 1s;
+}
+.plane:before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 150px;
+  top: 0;
+  left: 75px;
+  background-color: rgba(255,255,255,0.5);
+}
+.x {
+  background-color: rgba(0,0,255,0.5);
+}
+.xyz-container .x {
+  /* transform: rotateX(90deg); */
+}
+.y {
+  background-color: rgba(255,0,0,0.5);
+}
+.xyz-container .y {
+  /* transform: rotateY(90deg); */
+}
+.z {
+  background-color: rgba(0,255,0,0.5);
+}
+.xyz-container .z {
+  /* transform: rotateZ(90deg); */
+}
