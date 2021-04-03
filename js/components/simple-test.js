@@ -5,21 +5,23 @@ const Component = {
 
   data() {
     return {
-      deviceorientation: 'NO',
-      devicemotion: 'NO',
-      compassneedscalibration: 'NO',
-
-      absolute: null,
-
-      alpha: null,
-      beta: null,
-      gamma: null,
-
-      acceleration: null,
-      accelerationIncludingGravity: null,
-      rotationRate: null,
-      interval: null,
     };
+  },
+
+  computed: {
+    deviceorientation() { return this.$root.deviceorientation; },
+    absolute() { return this.$root.absolute; },
+    alpha() { return this.$root.alpha; },
+    beta() { return this.$root.beta; },
+    gamma() { return this.$root.gamma; },
+
+    devicemotion() { return this.$root.devicemotion; },
+    acceleration() { return this.$root.acceleration; },
+    accelerationIncludingGravity() { return this.$root.accelerationIncludingGravity; },
+    rotationRate() { return this.$root.rotationRate; },
+    interval() { return this.$root.interval; },
+
+    compassneedscalibration() { return this.$root.compassneedscalibration; },
   },
 
   filters: {
@@ -29,34 +31,6 @@ const Component = {
   },
 
   mounted() {
-    if (!('ondeviceorientation' in window)) {
-    } else {
-      this.deviceorientation = 'OK';
-      const that = this;
-      window.addEventListener('deviceorientation', function (event) {
-        that.absolute = event.absolute;
-        that.alpha = event.alpha;
-        that.beta = event.beta;
-        that.gamma = event.gamma;
-      });
-    }
-
-    if (!('ondevicemotion' in window)) {
-    } else {
-      this.devicemotion = 'OK';
-      const that = this;
-      window.addEventListener('devicemotion', function (event) {
-        that.acceleration = event.acceleration;
-        that.accelerationIncludingGravity = event.accelerationIncludingGravity;
-        that.rotationRate = event.rotationRate;
-        that.interval = event.interval;
-      });
-    }
-
-    if (!('oncompassneedscalibration' in window)) {
-    } else {
-      this.compassneedscalibration = 'OK';
-    }
   },
 
   template: `<div>

@@ -1,20 +1,16 @@
-const App = {
+const Component = {
   data() {
     return {
-      
     };
   },
 
   filters: {
-    
   },
 
   mounted() {
-    
   },
 
   methods: {
-    
   },
 
   template: `<div class="app-box">
@@ -50,4 +46,4 @@ const App = {
   </div>`,
 };
 
-export default App;
+export default Component;
