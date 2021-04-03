@@ -31,6 +31,7 @@ const App = {
           <b-navbar-nav>
               <b-nav-item route to="/">Inicio</b-nav-item>
               <b-nav-item route to="/simple-test">Simple Test</b-nav-item>
+              <b-nav-item route to="/orientation-xyz">Orientación XYZ</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>

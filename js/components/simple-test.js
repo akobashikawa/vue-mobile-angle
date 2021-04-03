@@ -15,15 +15,9 @@ const Component = {
       beta: null,
       gamma: null,
 
-      accelerationX: null,
-      accelerationY: null,
-      accelerationZ: null,
-      accelerationIGX: null,
-      accelerationIGY: null,
-      accelerationIGZ: null,
-      rotationAlpha: null,
-      rotationBeta: null,
-      rotationGamma: null,
+      acceleration: null,
+      accelerationIncludingGravity: null,
+      rotationRate: null,
       interval: null,
     };
   },
@@ -52,15 +46,9 @@ const Component = {
       this.devicemotion = 'OK';
       const that = this;
       window.addEventListener('devicemotion', function (event) {
-        that.accelerationX = event.acceleration.x;
-        that.accelerationY = event.acceleration.y;
-        that.accelerationZ = event.acceleration.z;
-        that.accelerationIGX = event.accelerationIncludingGravity.x;
-        that.accelerationIGY = event.accelerationIncludingGravity.y;
-        that.accelerationIGZ = event.accelerationIncludingGravity.z;
-        that.rotationAlpha = event.rotationRate.alpha;
-        that.rotationBeta = event.rotationRate.beta;
-        that.rotationGamma = event.rotationRate.gamma;
+        that.acceleration = event.acceleration;
+        that.accelerationIncludingGravity = event.accelerationIncludingGravity;
+        that.rotationRate = event.rotationRate;
         that.interval = event.interval;
       });
     }
@@ -104,40 +92,40 @@ const Component = {
           <span>{{ devicemotion }}</span>
         </b-list-group-item>
         <b-list-group-item class="d-flex justify-content-between align-items-center">
-          accelerationX:
-          <span>{{ accelerationX }}</span>
+          acceleration.x:
+          <span v-if="acceleration">{{ acceleration.x }}</span>
         </b-list-group-item>
         <b-list-group-item class="d-flex justify-content-between align-items-center">
-          accelerationY:
-          <span>{{ accelerationY }}</span>
+          acceleration.y:
+          <span v-if="acceleration">{{ acceleration.y }}</span>
         </b-list-group-item>
         <b-list-group-item class="d-flex justify-content-between align-items-center">
-          accelerationZ:
-          <span>{{ accelerationZ }}</span>
+          acceleration.z:
+          <span v-if="acceleration">{{ acceleration.z }}</span>
         </b-list-group-item>
         <b-list-group-item class="d-flex justify-content-between align-items-center">
-          accelerationIGX:
-          <span>{{ accelerationIGX }}</span>
+          accelerationIG.x:
+          <span v-if="accelerationIncludingGravity">{{ accelerationIncludingGravity.x }}</span>
         </b-list-group-item>
         <b-list-group-item class="d-flex justify-content-between align-items-center">
-          accelerationIGY:
-          <span>{{ accelerationIGY }}</span>
+          accelerationIG.y:
+          <span v-if="accelerationIncludingGravity">{{ accelerationIncludingGravity.y }}</span>
         </b-list-group-item>
         <b-list-group-item class="d-flex justify-content-between align-items-center">
-          accelerationIGZ:
-          <span>{{ accelerationIGZ }}</span>
+          accelerationIG.z:
+          <span v-if="accelerationIncludingGravity">{{ accelerationIncludingGravity.z }}</span>
         </b-list-group-item>
         <b-list-group-item class="d-flex justify-content-between align-items-center">
-          rotationAlpha:
-          <span>{{ rotationAlpha }}</span>
+          rotationRate.alpha:
+          <span v-if="rotationRate">{{ rotationRate.alpha }}</span>
         </b-list-group-item>
         <b-list-group-item class="d-flex justify-content-between align-items-center">
-          rotationBeta:
-          <span>{{ rotationBeta }}</span>
+          rotationRate.beta:
+          <span v-if="rotationRate">{{ rotationRate.beta }}</span>
         </b-list-group-item>
         <b-list-group-item class="d-flex justify-content-between align-items-center">
-          rotationGamma:
-          <span>{{ rotationGamma }}</span>
+          rotationRate.gamma:
+          <span v-if="rotationRate">{{ rotationRate.gamma }}</span>
         </b-list-group-item>
         <b-list-group-item class="d-flex justify-content-between align-items-center">
           interval:
